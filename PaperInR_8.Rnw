@@ -59,7 +59,7 @@ library(stargazer)
 
 <<collecting, echo=FALSE>>=
 # collecting
-fileLink="https://github.com/eScienceWinterSchool/Reproducibility/raw/master/censoredworld.csv"
+fileLink="https://github.com/UW-eScience-WinterSchool/Paper_print/raw/main/censoredworld.csv"
 dataidx=read.csv(fileLink)
 
 @
