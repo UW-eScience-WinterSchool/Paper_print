@@ -1,7 +1,9 @@
-%% loading data to do basic R
+%%%%%% changing some paramaters in chunks
+%%% name
+%%% figure
+%%% echo
 
 \documentclass[11pt]{article}
-
 
 \title{My first replicable Paper}
 \author{
@@ -14,8 +16,9 @@
 \date{\today}
 
 
+\usepackage{Sweave}
 \begin{document}
-\SweaveOpts{concordance=TRUE}
+\input{PaperInR_3-concordance}
 
 \maketitle 
 
@@ -24,10 +27,9 @@ This is an example on how to make a reproducible paper. We are using R from Rstu
 \end{abstract}
 
 
-\section{Introduction}\label{intro}  
+\section{Introduction}\label{intro}
 
 This is my intro to my great paper, I will explain the cool things I can do with my new `computational thinking' powers combined with some Latex. This is my intro to my great paper, I will explain the cool things I can do with my new `computational thinking' powers combined with some Latex. This is my intro to my great paper, I will explain the cool things I can do with my new `computational thinking' powers combined with some Latex. This is my intro to my great paper, I will explain the cool things I can do with my new `computational thinking' powers combined with some Latex.
-
 
 This is my nice intro to my great paper, 
 I will explain the cool things 
@@ -41,32 +43,23 @@ combined with some Latex.
 
 Sections may use a label\footnote{In fact, you can have a label wherever you think a future reference to that content might be needed.}. This label is needed for referencing. For example the next section has label \emph{datas}, so you can reference it by writing: As we see in section \ref{catexplo}.
 
-
-%%%%%% code for loading here
-
-% this is a CODE CHUNK
-<<>>=
-# collecting
-fileLink="https://github.com/UW-eScience-WinterSchool/Paper_print/raw/main/censoredworld.csv"
-dataidx=read.csv(fileLink)
-
-@
-
-
+% code chunk changes
 
 \subsection{Exploring Categorical Data}\label{catexplo}
 
 Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.
 
-%%%%%% code for exploring here
-<<>>=
-tableONI=table(dataidx$ONI)
-tableONI
-@
+% code chunk changes
 
-<<>>=
-barplot(tableONI)
-@
+\begin{Schunk}
+\begin{Soutput}
+ nd  ne per sel sub 
+  2  41   8  21   4 
+\end{Soutput}
+\end{Schunk}
+
+% code chunk changes
+\includegraphics{PaperInR_3-cat_barplot}
 
 
 
@@ -74,15 +67,21 @@ barplot(tableONI)
 
 Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.
 
-%%%%%% code for exploring here
-<<>>=
-summary(dataidx[,c(3,4)])
-@
+% code chunk changes
+\begin{Schunk}
+\begin{Soutput}
+       FH             RWB       
+ Min.   :10.00   Min.   : 6.38  
+ 1st Qu.:43.50   1st Qu.:28.22  
+ Median :61.00   Median :37.99  
+ Mean   :58.91   Mean   :39.67  
+ 3rd Qu.:80.00   3rd Qu.:46.85  
+ Max.   :97.00   Max.   :83.90  
+\end{Soutput}
+\end{Schunk}
 
-
-<<>>=
-boxplot(dataidx[,c(3,4)])
-@
+% code chunk changes
+\includegraphics{PaperInR_3-num_plot}
 
 Boxplots were introduced by Tuckey (Tukey, John W (1977). Exploratory Data Analysis. Addison-Wesley.)
 
@@ -93,10 +92,8 @@ Here, I continue doing this nice work, I hope you like it and read it. It has be
 
 \subsection{Numerical and  Categorical}\label{binumcat}
 
-%%%%%% code for exploring here
-<<>>=
-boxplot(dataidx$FH~dataidx$Region)
-@
+% code chunk changes
+\includegraphics{PaperInR_3-numcat_plot}
 
 Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.
 
@@ -104,9 +101,9 @@ Here, I continue doing this nice work, I hope you like it and read it. It has be
 
 Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.
 %%%%%% code for exploring here
-<<>>=
-plot(dataidx$FH~dataidx$RWB)
-@
+
+% code chunk changes
+\includegraphics{PaperInR_3-numnum_plot}
 
 The scatter plot is thought to be invented by  John Frederick W. Herschel according to this link: https://qz.com/1235712/the-origins-of-the-scatter-plot-data-visualizations-greatest-invention/
 
