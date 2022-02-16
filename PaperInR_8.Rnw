@@ -47,8 +47,7 @@ combined with some Latex.
 \section{Exploring Data}\label{explo}
 
 
-Sections may use a label\footnote{In fact, you can have a label wherever you think a future reference to that content might be needed.}. This label is needed for referencing. For example the next section has label \emph{datas}, so you can reference it by writing: As we see in section \ref{catexplo}.
-
+Sections may use a label\footnote{In fact, you can have a label wherever you think a future reference to that content might be needed.}. This label is needed for referencing. For example the coming sub section has label \emph{catexplo}, so you can reference it by writing: As we see in section \ref{catexplo}.
 
 
 

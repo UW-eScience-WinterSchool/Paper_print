@@ -39,8 +39,7 @@ combined with some Latex.
 \section{Exploring Data}\label{explo}
 
 
-Sections may use a label\footnote{In fact, you can have a label wherever you think a future reference to that content might be needed.}. This label is needed for referencing. For example the next section has label \emph{datas}, so you can reference it by writing: As we see in section \ref{catexplo}.
-
+Sections may use a label\footnote{In fact, you can have a label wherever you think a future reference to that content might be needed.}. This label is needed for referencing. For example the coming sub section has label \emph{catexplo}, so you can reference it by writing: As we see in section \ref{catexplo}.
 
 %%%%%% code for loading here
 
@@ -79,6 +78,7 @@ Here, I continue doing this nice work, I hope you like it and read it. It has be
 summary(dataidx[,c(3,4)])
 @
 
+%%% making a plot but you won't see it
 
 <<>>=
 boxplot(dataidx[,c(3,4)])
@@ -93,7 +93,7 @@ Here, I continue doing this nice work, I hope you like it and read it. It has be
 
 \subsection{Numerical and  Categorical}\label{binumcat}
 
-%%%%%% code for exploring here
+%%%%%% 
 <<>>=
 boxplot(dataidx$FH~dataidx$Region)
 @

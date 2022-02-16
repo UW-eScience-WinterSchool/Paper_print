@@ -44,8 +44,7 @@ combined with some Latex.
 \section{Exploring Data}\label{explo}
 
 
-Sections may use a label\footnote{In fact, you can have a label wherever you think a future reference to that content might be needed.}. This label is needed for referencing. For example the next section has label \emph{datas}, so you can reference it by writing: As we see in section \ref{catexplo}.
-
+Sections may use a label\footnote{In fact, you can have a label wherever you think a future reference to that content might be needed.}. This label is needed for referencing. For example the coming sub section has label \emph{catexplo}, so you can reference it by writing: As we see in section \ref{catexplo}.
 
 
 
@@ -229,6 +228,8 @@ regre2=lm(FH~RWB+ONI,data=dataidx)
 
 \clearpage
 These is a better summary, and for both:
+
+%changes with stargazer
 
 <<echo=FALSE,results=tex>>=
 stargazer(regre1,regre2,title = "Regression Models",label = 'regs')

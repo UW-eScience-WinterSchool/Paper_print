@@ -44,7 +44,8 @@ combined with some Latex.
 \section{Exploring Data}\label{explo}
 
 
-Sections may use a label\footnote{In fact, you can have a label wherever you think a future reference to that content might be needed.}. This label is needed for referencing. For example the next section has label \emph{datas}, so you can reference it by writing: As we see in section \ref{catexplo}.
+Sections may use a label\footnote{In fact, you can have a label wherever you think a future reference to that content might be needed.}. This label is needed for referencing. For example the coming sub section has label \emph{catexplo}, so you can reference it by writing: As we see in section \ref{catexplo}.
+
 
 
 
@@ -75,6 +76,8 @@ library(stargazer)
 % USING "results=tex" 
 
 <<results=tex,echo=FALSE>>=
+
+#reporttools
 tableNominal(vars = dataidx[, c(2,5)], 
              cap = "Freq Table", 
              vertical = FALSE, 
@@ -117,7 +120,7 @@ bar1
 
 Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.
 
-%%%%%% stats for numeric columns
+%%%%%% stats for numeric columns. 
 
 <<summary, results=tex, echo=FALSE>>=
 stargazer(dataidx[,c(3,4)],
