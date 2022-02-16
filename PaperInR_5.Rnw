@@ -154,7 +154,7 @@ box +labs(x=NULL,y=NULL)
 
 
 
-Boxplots were introduced by Tuckey (Tukey, John W (1977). Exploratory Data Analysis. Addison-Wesley.)
+Boxplots were introduced by Tuckey in 1977 (https://www.worldcat.org/title/exploratory-data-analysis/oclc/03058187)
 
 \section{Looking for Relationships}\label{bivar}
 

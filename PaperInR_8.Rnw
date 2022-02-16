@@ -2,8 +2,9 @@
 
 \documentclass[11pt]{article}
 
-\usepackage{apacite} %bib style
 
+\usepackage{apacite} %bib style
+\usepackage{natbib}
 \usepackage{longtable} 
 
 \usepackage{adjustbox} 
@@ -129,6 +130,9 @@ stargazer(dataidx[,c(3,4)],
 
 In the Table \ref{numexplore_table}, you realize that the mean of FH is {\bf\Sexpr{mean(dataidx$FH)}}.
 
+%ending page
+\pagebreak
+
 <<num_table, echo=FALSE>>=
 base=ggplot(data=dataidx)
 box = base + geom_boxplot(aes(y=FH,x=1)) 
@@ -150,7 +154,7 @@ box +labs(x=NULL,y=NULL)
 \end{figure}
 
 %%%%% adding citation
-Boxplots were introduced by Tuckey \cite{tukey_exploratory_1977}.
+Boxplots \citep{tukey_exploratory_1977} were first introduced in the mid seventies .
 
 \section{Looking for Relationships}\label{bivar}
 
@@ -213,7 +217,7 @@ plot(dataidx$FH~dataidx$RWB)
 \end{figure}
 
 %%%%% adding citation
-The scatter plot is thought to be invented by  John Frederick W. Herschel \cite{friendly_early_2005}
+The scatter plot is thought to be invented by  John Frederick W. Herschel, according to \cite {friendly_early_2005}.
 
 \section{My Regression}\label{regre}
 
